@@ -7,3 +7,11 @@
 	color: blue;
 }
 </style>
+
+<script>
+export default {
+	created() {
+		document.body.style.background = this.$route.meta.backgroundColor;
+	}
+}
+</script>
