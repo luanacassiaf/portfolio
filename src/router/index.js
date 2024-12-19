@@ -1,20 +1,31 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import HomeView from '../views/HomeView.vue'
+import AboutView from '../views/AboutView.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
     {
       path: '/',
-      name: 'home',
-      component: HomeView,
-      meta: { backgroundColor: 'linear-gradient(0deg, rgba(34,193,195,1) 0%, rgba(253,187,45,1) 100%)' }
+      name: 'about',
+      component: AboutView
     },
     {
-      path: '/about',
-      name: 'about',
-      component: () => import('../views/AboutView.vue'),
-      meta: { backgroundColor: 'radial-gradient(circle, rgba(63,94,251,1) 0%, rgba(252,70,107,1) 100%)' }
+      path: '/experience',
+      name: 'experience',
+      component: () => import('../views/ExperienceView.vue')
+    },
+    {
+      path: '/education',
+      name: 'education',
+      component: () => import('../views/EducationView.vue')
+    }, {
+      path: '/skills',
+      name: 'skills',
+      component: () => import('../views/SkillsView.vue')
+    }, {
+      path: '/certificates',
+      name: 'certificates',
+      component: () => import('../views/CertificatesView.vue')
     }
   ]
 })
