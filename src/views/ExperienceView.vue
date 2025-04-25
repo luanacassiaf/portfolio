@@ -1,32 +1,53 @@
 <template>
-	<section class="resume-section" id="experience">
-		<div class="resume-section-content">
-			<h2 class="mb-5">Experiência</h2>
+  <section class="resume-section" id="experience">
+    <div class="resume-section-content">
+      <h2 class="mb-5">Experiência</h2>
 
-			<div class="d-flex flex-column flex-md-row justify-content-between mb-5">
-				<div class="flex-grow-1">
-					<h3 class="mb-0">Desenvolvedora Full Stack Júnior</h3>
-					<div class="subheading mb-3">Bling!</div>
-					<p>Mussum Ipsum, cacilds vidis litro abertis.  Copo furadis é disculpa de bebadis, arcu quam euismod magna. Praesent malesuada urna nisi, quis volutpat erat hendrerit non. Nam vulputate dapibus. Viva Forevis aptent taciti sociosqu ad litora torquent. Manduma pindureta quium dia nois paga.</p>
-				</div>
-				<div class="flex-shrink-0"><span class="text-primary">Janeiro 2023 - Presente</span></div>
-			</div>
+      <ActivityItemComponent
+        title="Desenvolvedora Full Stack Júnior"
+        subtitle="Bling - LWSA Company"
+        startedIn="Janeiro 2023"
+        finishedIn="Presente"
+      >
+        <p>Atuo como desenvolvedora na equipe de Fintech.</p>
+        <p>
+          Implemento e aprimoro funcionalidades na conta digital, faço análises
+          técnicas, automatizo processos com scripts, mapeio ativamente débitos
+          técnicos e resolvo bugs.
+        </p>
+        <p>
+          Tecnologias incluem: PHP e MySQL no back-end; HTML, CSS, JavaScript,
+          jQuery e Vue.js no front-end.
+        </p>
+        <p>
+          Também elaboro testes de unidade e integração com PHPUnit, utilizo Git
+          para versionamento e Docker para conteinerização.
+        </p>
+      </ActivityItemComponent>
 
-			<div class="d-flex flex-column flex-md-row justify-content-between">
-				<div class="flex-grow-1">
-					<h3 class="mb-0">Estagiária em Desenvolvimento Back-end</h3>
-					<div class="subheading mb-3">P.A. Construshop LTDA</div>
-					<p>Mussum Ipsum, cacilds vidis litro abertis.  Atirei o pau no gatis, per gatis num morreus. Admodum accumsan disputationi eu sit. Vide electram sadipscing et per. Detraxit consequat et quo num tendi nada. Vehicula non. Ut sed ex eros. Vivamus sit amet nibh non tellus tristique interdum.</p>
-				</div>
-				<div class="flex-shrink-0"><span class="text-primary">Fevereiro 2022 - Dezembro 2022</span></div>
-
-			</div>
-		</div>
-	</section>
+      <ActivityItemComponent
+        title="Estagiária em Desenvolvimento Back-end"
+        subtitle="P.A. Construshop LTDA"
+        startedIn="Fevereiro 2022"
+        finishedIn="Dezembro 2022"
+      >
+        <p>
+          Atuei no desenvolvimento de uma API REST construída com PHP 7, Slim
+          Framework 4 e Microsoft SQL Server.
+        </p>
+        <p>Atividades realizadas:</p>
+        <ul>
+          <li>Integração de API com serviços de e-commerce;</li>
+          <li>Refatoração de processos da antiga para a nova API;</li>
+          <li>Testes de unidade e integração utilizando PHPUnit;</li>
+          <li>Testes de carga e estresse em linguagem Python com Locust;</li>
+          <li>Elaboração de expressões regulares</li>
+        </ul>
+      </ActivityItemComponent>
+    </div>
+  </section>
 </template>
 
-<style scoped></style>
-
-<script>
-
+<script setup>
+import ActivityItemComponent from "../components/ActivityItemComponent.vue";
 </script>
