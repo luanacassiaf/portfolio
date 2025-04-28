@@ -1,12 +1,15 @@
 {
   "name": "portfolio",
+  "homepage": "https://luanacassiaf.github.io/portfolio/",
   "version": "0.0.0",
   "private": true,
   "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.7.2",
@@ -16,6 +19,7 @@
     "@fortawesome/vue-fontawesome": "^3.0.8",
     "bootstrap": "^5.3.3",
     "bootstrap-icons": "^1.11.3",
+    "gh-pages": "^6.3.0",
     "vue": "^3.4.21",
     "vue-router": "^4.3.0"
   },
