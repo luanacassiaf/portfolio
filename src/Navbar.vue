@@ -8,8 +8,8 @@
       <span class="d-none d-lg-block">
         <img
           class="img-fluid img-profile rounded-circle mx-auto mb-2"
-          src="./assets/cat.png"
-          alt="..."
+          src="./assets/img/Foto.jpg"
+          alt="Foto"
         />
       </span>
     </a>

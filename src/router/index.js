@@ -27,7 +27,9 @@ const router = createRouter({
       name: 'certificates',
       component: () => import('../views/CertificatesView.vue')
     }
-  ]
+  ],
+  scrollBehavior(to, from, savedPosition) {
+    return { top: 0 };
+  }
 })
-
 export default router

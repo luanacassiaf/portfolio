@@ -40,6 +40,7 @@
             title="CSS"
           />
         </li>
+        <li class="w-100 break-line"></li>
         <li class="list-inline-item">
           <font-awesome-icon
             :icon="['fab', 'bootstrap']"
@@ -106,7 +107,26 @@ ul {
 }
 
 .parent {
-  gap: 10%;
+  gap: 12%;
+}
+
+@media (max-width: 992px) {
+  .parent {
+    gap: 10%;
+  }
+}
+
+.break-line {
+  display: inline !important;
+}
+@media (max-width: 612px) {
+  .break-line {
+    display: block !important;
+  }
+
+  .list-inline-item:not(:last-child) {
+    margin-right: 1rem;
+  }
 }
 
 .parent,
@@ -124,5 +144,5 @@ ul {
 <script setup>
 import ListItemComponent from "../components/ListItemComponent.vue";
 
-const icon = ["far", "circle-check"];
+const icon = ["fas", "circle-check"];
 </script>

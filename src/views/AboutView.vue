@@ -7,6 +7,7 @@
       </h1>
 
       <div class="subheading mb-5">
+        Desenvolvedora Web Full Stack · Pouso Alegre/MG ·
         <a href="mailto:luanacassiaf@gmail.com">luanacassiaf@gmail.com</a>
       </div>
 

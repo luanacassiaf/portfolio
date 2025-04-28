@@ -54,5 +54,5 @@
 <script setup>
 import ListItemComponent from "../components/ListItemComponent.vue";
 
-const icon = ["fas", "trophy"];
+const icon = ["fas", "medal"];
 </script>
