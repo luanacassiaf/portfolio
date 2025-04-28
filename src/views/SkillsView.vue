@@ -77,40 +77,52 @@
         </li>
       </ul>
 
-      <div class="subheading mt-3 mb-3">Outras habilidades técnicas:</div>
-      <ul class="fa-ul mb-0">
-        <ListItemComponent icon="check" iconColor="limegreen" title="MySQL" />
-        <ListItemComponent icon="check" iconColor="limegreen" title="MongoDB" />
-        <ListItemComponent
-          icon="check"
-          iconColor="limegreen"
-          title="Testes de software"
-        />
-        <ListItemComponent icon="check" iconColor="limegreen" title="Scrum" />
-      </ul>
-
-      <div class="subheading mt-3 mb-3">Habilidades comportamentais:</div>
-      <ul class="fa-ul mb-0">
-        <ListItemComponent
-          icon="check"
-          iconColor="limegreen"
-          title="Proatividade"
-        />
-        <ListItemComponent
-          icon="check"
-          iconColor="limegreen"
-          title="Comprometimento"
-        />
-        <ListItemComponent
-          icon="check"
-          iconColor="limegreen"
-          title="Pensamento crítico"
-        />
-      </ul>
+      <div class="parent">
+        <div class="child-1">
+          <div class="subheading mt-3 mb-3">Outras habilidades técnicas</div>
+          <ul class="mb-0">
+            <ListItemComponent :icon="icon" title="MySQL" />
+            <ListItemComponent :icon="icon" title="MongoDB" />
+            <ListItemComponent :icon="icon" title="Testes de software" />
+            <ListItemComponent :icon="icon" title="Scrum" />
+          </ul>
+        </div>
+        <div class="child-2">
+          <div class="subheading mt-3 mb-3">Habilidades comportamentais</div>
+          <ul class="mb-0">
+            <ListItemComponent :icon="icon" title="Proatividade" />
+            <ListItemComponent :icon="icon" title="Comprometimento" />
+            <ListItemComponent :icon="icon" title="Pensamento crítico" />
+          </ul>
+        </div>
+      </div>
     </div>
   </section>
 </template>
 
+<style scoped>
+ul {
+  padding-left: 0 !important;
+}
+
+.parent {
+  gap: 10%;
+}
+
+.parent,
+.child-1,
+.child-2 {
+  display: flex;
+}
+
+.child-1,
+.child-2 {
+  flex-direction: column;
+}
+</style>
+
 <script setup>
 import ListItemComponent from "../components/ListItemComponent.vue";
+
+const icon = ["far", "circle-check"];
 </script>

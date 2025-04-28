@@ -1,8 +1,8 @@
 <template>
   <a :href="link" target="_blank">
     <li>
-      <span class="item" :style="{ color: iconColor }">
-        <font-awesome-icon :icon="['fas', icon]" />
+      <span class="item" :style="{ color: iconColor ?? '#1E90FF' }">
+        <font-awesome-icon :icon="icon" />
       </span>
       <p>
         {{ title }} <span v-if="secondTitle">- {{ secondTitle }}</span>
@@ -13,8 +13,8 @@
 
 <script setup>
 defineProps({
-  icon: String,
-  iconColor: String,
+  icon: Array,
+  iconColor: String | null,
   title: String,
   secondTitle: String | null,
   link: String | null,
