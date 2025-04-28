@@ -23,7 +23,6 @@
       <span class="navbar-toggler-icon"></span>
     </button>
 
-    <!-- Colapso do menu -->
     <div class="collapse navbar-collapse" id="navbarResponsive">
       <ul class="navbar-nav">
         <li class="nav-item">

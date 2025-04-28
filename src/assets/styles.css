@@ -43,7 +43,7 @@
   --bs-danger: #dc3545;
   --bs-light: #f8f9fa;
   --bs-dark: #212529;
-  --bs-primary-rgb: 30,144,255;
+  --bs-primary-rgb: 30, 144, 255;
   --bs-secondary-rgb: 108, 117, 125;
   --bs-success-rgb: 25, 135, 84;
   --bs-info-rgb: 13, 202, 240;
@@ -4144,8 +4144,7 @@ fieldset:disabled .btn {
   list-style: none;
 }
 
-#sideNav .navbar-collapse .navbar-nav .nav-item .nav-link
-.nav-link {
+#sideNav .navbar-collapse .navbar-nav .nav-item .nav-link .nav-link {
   display: block;
   padding: var(--bs-nav-link-padding-y) var(--bs-nav-link-padding-x);
   font-size: var(--bs-nav-link-font-size);
@@ -12748,9 +12747,12 @@ section.resume-section {
   align-items: center;
   padding-left: 1rem;
   padding-right: 1rem;
-  padding-top: 5rem;
-  padding-bottom: 5rem;
-  max-width: 75rem;
+  /* padding-bottom: 5rem; */
+  /* max-width: 75rem; */
+}
+
+section.resume-section#experience {
+  padding-top: 3rem;
 }
 
 section.resume-section .resume-section-content {
@@ -12759,7 +12761,7 @@ section.resume-section .resume-section-content {
 
 @media (min-width: 768px) {
   section.resume-section {
-    min-height: 100vh;
+    min-height: 99vh;
   }
 }
 
@@ -12767,7 +12769,13 @@ section.resume-section .resume-section-content {
   section.resume-section {
     padding-left: 3rem;
     padding-right: 3rem;
-    padding-top: 5rem;
-    padding-bottom: 5rem;
+  }
+}
+
+@media (max-width: 992px) {
+
+  section.resume-section,
+  section.resume-section#experience {
+    padding-top: 2rem;
   }
 }
