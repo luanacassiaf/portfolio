@@ -4,7 +4,11 @@
     id="sideNav"
   >
     <a class="navbar-brand js-scroll-trigger">
-      <span class="d-block d-lg-none">Luana Freitas</span>
+      <span class="d-block d-lg-none">
+        <RouterLink to="/" class="navbar-title" @click="closeMenu">
+          Luana Freitas
+        </RouterLink>
+      </span>
       <span class="d-none d-lg-block">
         <img
           class="img-fluid img-profile rounded-circle mx-auto mb-2"
@@ -29,41 +33,46 @@
           <RouterLink
             to="/"
             class="nav-link js-scroll-trigger"
+            active-class="active"
             @click="closeMenu"
-            >Sobre</RouterLink
-          >
+            >Sobre
+          </RouterLink>
         </li>
         <li class="nav-item">
           <RouterLink
             to="/experience"
             class="nav-link js-scroll-trigger"
+            active-class="active"
             @click="closeMenu"
-            >Experiência</RouterLink
-          >
+            >Experiência
+          </RouterLink>
         </li>
         <li class="nav-item">
           <RouterLink
             to="/education"
             class="nav-link js-scroll-trigger"
+            active-class="active"
             @click="closeMenu"
-            >Educação</RouterLink
-          >
+            >Educação
+          </RouterLink>
         </li>
         <li class="nav-item">
           <RouterLink
             to="/skills"
             class="nav-link js-scroll-trigger"
+            active-class="active"
             @click="closeMenu"
-            >Habilidades</RouterLink
-          >
+            >Habilidades
+          </RouterLink>
         </li>
         <li class="nav-item">
           <RouterLink
             to="/certificates"
             class="nav-link js-scroll-trigger"
+            active-class="active"
             @click="closeMenu"
-            >Certificados</RouterLink
-          >
+            >Certificados
+          </RouterLink>
         </li>
       </ul>
     </div>
@@ -72,6 +81,7 @@
 
 <script setup>
 import { onMounted } from "vue";
+import { RouterLink } from "vue-router";
 import Collapse from "bootstrap/js/dist/collapse";
 
 let collapseInstance;

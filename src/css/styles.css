@@ -12773,9 +12773,17 @@ section.resume-section .resume-section-content {
 }
 
 @media (max-width: 992px) {
+
   section.resume-section,
   section.resume-section#experience {
     padding-top: 2rem;
     padding-bottom: 2rem;
   }
+}
+
+.navbar-title,
+a.navbar-title:hover {
+  color: var(--bs-white);
+  text-decoration: none;
+  font-family: var(--bs-body-font-family);
 }
