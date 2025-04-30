@@ -5,7 +5,7 @@
         <font-awesome-icon :icon="icon" />
       </span>
       <p>
-        {{ title }} <span v-if="secondTitle">- {{ secondTitle }}</span>
+        {{ title }} <span v-if="secondTitle">· {{ secondTitle }}</span>
       </p>
     </li>
   </a>

@@ -5,75 +5,15 @@
       <div class="subheading mb-3">Linguagens e Ferramentas de Programação</div>
 
       <ul class="list-inline dev-icons">
-        <li class="list-inline-item">
+        <li
+          v-for="(tech, index) in techIcons"
+          :key="index"
+          class="list-inline-item"
+        >
           <font-awesome-icon
-            :icon="['fab', 'php']"
-            aria-label="PHP"
-            title="PHP"
-          />
-        </li>
-        <li class="list-inline-item">
-          <font-awesome-icon
-            :icon="['fab', 'square-js']"
-            aria-label="PHP"
-            title="JavaScript"
-          />
-        </li>
-        <li class="list-inline-item">
-          <font-awesome-icon
-            :icon="['fab', 'vuejs']"
-            aria-label="Vue.js"
-            title="Vue.js"
-          />
-        </li>
-        <li class="list-inline-item">
-          <font-awesome-icon
-            :icon="['fab', 'html5']"
-            aria-label="HTML"
-            title="HTML"
-          />
-        </li>
-        <li class="list-inline-item">
-          <font-awesome-icon
-            :icon="['fab', 'css3-alt']"
-            aria-label="CSS"
-            title="CSS"
-          />
-        </li>
-        <li class="w-100 break-line"></li>
-        <li class="list-inline-item">
-          <font-awesome-icon
-            :icon="['fab', 'bootstrap']"
-            aria-label="Bootstrap"
-            title="Bootstrap"
-          />
-        </li>
-        <li class="list-inline-item">
-          <font-awesome-icon
-            :icon="['fab', 'golang']"
-            aria-label="Golang"
-            title="Golang"
-          />
-        </li>
-        <li class="list-inline-item">
-          <font-awesome-icon
-            :icon="['fab', 'node-js']"
-            aria-label="Node.js"
-            title="Node.js"
-          />
-        </li>
-        <li class="list-inline-item">
-          <font-awesome-icon
-            :icon="['fab', 'python']"
-            aria-label="Python"
-            title="Python"
-          />
-        </li>
-        <li class="list-inline-item">
-          <font-awesome-icon
-            :icon="['fab', 'linux']"
-            aria-label="Linux"
-            title="Linux"
+            :icon="tech.icon"
+            :aria-label="tech.label"
+            :title="tech.label"
           />
         </li>
       </ul>
@@ -82,24 +22,52 @@
         <div class="child-1">
           <div class="subheading mt-3 mb-3">Outras habilidades técnicas</div>
           <ul class="mb-0">
-            <ListItemComponent :icon="icon" title="MySQL" />
-            <ListItemComponent :icon="icon" title="MongoDB" />
-            <ListItemComponent :icon="icon" title="Testes de software" />
-            <ListItemComponent :icon="icon" title="Scrum" />
+            <ListItemComponent
+              v-for="(item, index) in techSkills"
+              :key="'tech-' + index"
+              :icon="icon"
+              :title="item"
+            />
           </ul>
         </div>
         <div class="child-2">
           <div class="subheading mt-3 mb-3">Habilidades comportamentais</div>
           <ul class="mb-0">
-            <ListItemComponent :icon="icon" title="Proatividade" />
-            <ListItemComponent :icon="icon" title="Comprometimento" />
-            <ListItemComponent :icon="icon" title="Pensamento crítico" />
+            <ListItemComponent
+              v-for="(item, index) in softSkills"
+              :key="'soft-' + index"
+              :icon="icon"
+              :title="item"
+            />
           </ul>
         </div>
       </div>
     </div>
   </section>
 </template>
+
+<script setup>
+import ListItemComponent from "../components/ListItemComponent.vue";
+
+const icon = ["fas", "circle-check"];
+
+const techIcons = [
+  { icon: ["fab", "php"], label: "PHP" },
+  { icon: ["fab", "square-js"], label: "JavaScript" },
+  { icon: ["fab", "vuejs"], label: "Vue.js" },
+  { icon: ["fab", "html5"], label: "HTML" },
+  { icon: ["fab", "css3-alt"], label: "CSS" },
+  { icon: ["fab", "bootstrap"], label: "Bootstrap" },
+  { icon: ["fab", "golang"], label: "Golang" },
+  { icon: ["fab", "node-js"], label: "Node.js" },
+  { icon: ["fab", "python"], label: "Python" },
+  { icon: ["fab", "linux"], label: "Linux" },
+];
+
+const techSkills = ["MySQL", "MongoDB", "Testes de software", "Scrum"];
+
+const softSkills = ["Proatividade", "Comprometimento", "Pensamento crítico"];
+</script>
 
 <style scoped>
 ul {
@@ -116,14 +84,7 @@ ul {
   }
 }
 
-.break-line {
-  display: inline !important;
-}
 @media (max-width: 612px) {
-  .break-line {
-    display: block !important;
-  }
-
   .list-inline-item:not(:last-child) {
     margin-right: 1rem;
   }
@@ -140,9 +101,3 @@ ul {
   flex-direction: column;
 }
 </style>
-
-<script setup>
-import ListItemComponent from "../components/ListItemComponent.vue";
-
-const icon = ["fas", "circle-check"];
-</script>
