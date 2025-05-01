@@ -5,23 +5,25 @@
 
       <ActivityItemComponent
         title="Desenvolvedora Full Stack Júnior"
-        subtitle="Bling - LWSA Company"
+        subtitle="Bling · LWSA"
         startedIn="Janeiro 2023"
         finishedIn="Presente"
       >
         <p>Atuo como desenvolvedora na equipe de Fintech.</p>
         <p>
-          Implemento e aprimoro funcionalidades na conta digital, faço análises
-          técnicas, automatizo processos com scripts, mapeio ativamente débitos
-          técnicos e resolvo bugs.
+          Implemento funcionalidades para conta digital em um sistema monolítico
+          utilizando PHP e Vue.js, além de atuar com Golang no BFF (Backend for
+          Frontend) e Vue.js no micro-frontend.
         </p>
         <p>
-          Tecnologias incluem: PHP e MySQL no back-end; HTML, CSS, JavaScript,
-          jQuery e Vue.js no front-end.
+          Faço análises técnicas, automatizo processos com scripts, mapeio
+          ativamente débitos técnicos e resolvo chamados. Também elaboro testes
+          de unidade e integração, utilizo Git para versionamento e Docker para
+          conteinerização.
         </p>
         <p>
-          Também elaboro testes de unidade e integração com PHPUnit, utilizo Git
-          para versionamento e Docker para conteinerização.
+          Tecnologias: PHP, Golang e MySQL no back-end; Vue.js, JavaScript,
+          jQuery, HTML e CSS no front-end.
         </p>
       </ActivityItemComponent>
 
@@ -43,6 +45,10 @@
           <li>Testes de carga e estresse em linguagem Python com Locust;</li>
           <li>Elaboração de expressões regulares</li>
         </ul>
+        <p>
+          Tecnologias: PHP, Git, Docker, SQL Server, Slim Framework, PHPUnit,
+          Locust, Python.
+        </p>
       </ActivityItemComponent>
     </div>
   </section>

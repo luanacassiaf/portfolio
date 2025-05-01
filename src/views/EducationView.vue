@@ -11,7 +11,7 @@
       >
         <p>
           TCC: "Desenvolvimento de Testes Automatizados para API: Estudo de Caso
-          em um Sistema de E-commerce"
+          em um Sistema de E-commerce".
         </p>
       </ActivityItemComponent>
 
@@ -24,7 +24,7 @@
       >
         <p>
           TCC: Site para o Núcleo de História Natural do IFSULDEMINAS - Campus
-          Inconfidentes
+          Inconfidentes.
         </p>
       </ActivityItemComponent>
     </div>
