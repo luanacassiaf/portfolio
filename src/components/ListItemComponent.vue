@@ -1,22 +1,25 @@
 <template>
-  <a :href="link" target="_blank">
-    <li>
-      <span class="item" :style="{ color: iconColor ?? '#1E90FF' }">
-        <font-awesome-icon :icon="icon" />
-      </span>
-      <p>
-        {{ title }} <span v-if="secondTitle">· {{ secondTitle }}</span>
-      </p>
-    </li>
-  </a>
+  <li>
+    <p class="icon">
+      <FontAwesomeIcon :icon="icon" />
+    </p>
+    <div class="content">
+      <a :href="link" target="_blank">
+        <p :class="[subtitle ? 'mb-0' : '']">{{ title }}</p>
+      </a>
+      <p class="subtitle" v-if="subtitle">{{ subtitle }} · {{ duration }}</p>
+    </div>
+  </li>
 </template>
 
 <script setup>
+import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
+
 defineProps({
   icon: Array,
-  iconColor: String | null,
   title: String,
-  secondTitle: String | null,
+  subtitle: String | null,
+  duration: String | null,
   link: String | null,
 });
 </script>
@@ -24,10 +27,20 @@ defineProps({
 <style scoped>
 li {
   display: flex;
+  align-items: center;
   gap: 16px;
 }
 
-.item {
+.icon {
+  color: #1e90ff;
+}
+
+.icon,
+p.title {
   font-size: 18px;
+}
+
+p.subtitle {
+  font-size: 14px;
 }
 </style>
